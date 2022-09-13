@@ -17,6 +17,9 @@ function makeWorker(script) {
 self.reactive({attributes:["showfunction"]});
 
 self.properties({
+    render() {
+        // dummy, gets redefined on connect
+    },
     connected() {
         this.style.width = "fit-content";
         this.style.maxWidth = "fit-content";
