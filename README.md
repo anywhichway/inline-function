@@ -69,6 +69,10 @@ a web browser with tightly looping code.
 
 # Version History (reverse chronological order)
 
+2022-09-25 v0.0.6 Updated for changes to quickComponent.
+
 2022-09-13 v0.0.5 Minor optimizations
+
 2022-09-10 v0.0.4 Updated docs
+
 2022-09-10 v0.0.3 Added documentation and load improvements

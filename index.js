@@ -1,5 +1,3 @@
-const self = window.currentComponent(import.meta.url);
-
 function makeWorker(script) {
     var URL = window.URL || window.webkitURL;
     var Blob = window.Blob;
