@@ -23,7 +23,7 @@ After this you can include the tag `<inline-function>` in your HTML.
 
 # Configuration
 
-A `inline-function` is configured with attributes, nested HTML, and slots. The example below shows how to eval arbitrary 
+A `inline-function` is configured with attributes, nested HTML, and expressions. The example below shows how to eval arbitrary 
 JavaScript and preserve the error message for delivery to the calling page.
 
 ```html
@@ -42,22 +42,22 @@ JavaScript and preserve the error message for delivery to the calling page.
             return result;
         }
     </script>
-    <slot>2 + 2</slot>
+    <expression>2 + 2</expression>
 </inline-function>
 ```
 
 Any scripts you pass with a `src` attribute are loaded to support execution of your custom function. There should be
 precisely one script that contains nothing but a single function definition. This is the function that will be executed.
-Arguments are provided via an un-named slot.
+Arguments are provided via a tag `expression`.
 
 # Dynamic Updates
 
-By changing the slot value and calling `render` you can re-use the tag with other arguments.
+By changing the expression value and calling `render` you can re-use the tag with other arguments.
 
 ```javascript
 const computer = document.getElementById("myeval"),
-    slot = computer.querySelector("[slot]");
-slot.innerText = "2 - 2";
+    expression = computer.querySelector("expression");
+expression.innerText = "2 - 2";
 computer.render();
 ```
 
@@ -68,6 +68,8 @@ This provides the most security for executing potentially malicious code. Howeve
 a web browser with tightly looping code.
 
 # Version History (reverse chronological order)
+
+2022-10-07 v0.0.7 Replaced `slot` with `expression` since `slot` was nto really a custom element slot.
 
 2022-09-25 v0.0.6 Updated for changes to quickComponent.
 

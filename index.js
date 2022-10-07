@@ -41,12 +41,12 @@ self.properties({
             });`
                 );
                 worker.onmessage = (event) => {
-                    const text = this.querySelector('slot').textContent.trim(),
+                    const text = this.querySelector('expression').textContent.trim(),
                         result = cleaner(event.data);
                     this.shadowRoot.innerHTML = `<span style="width:fit-content;white-space: nowrap;">${this.getAttribute("showfunction")==="true" ? text + " = " : ""}${result}</span>`
                 }
             }
-            let f = this.querySelector('slot')?.textContent.trim();
+            let f = this.querySelector('expression')?.textContent.trim();
             if(f) {
                 this.setAttribute("title",f);
                 if(f.startsWith("{") && f.endsWith("}") && f.includes("return ")) {

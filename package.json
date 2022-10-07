@@ -1,0 +1,23 @@
+{
+  "name": "@anywhichway/inline-function",
+  "version": "0.0.7",
+  "description": "A web component for safely evaluating complex and symbolic math expressions and other functions and displaying the result.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anywhichway/inline-function.git"
+  },
+  "keywords": [
+    "MathJS",
+    "eval"
+  ],
+  "author": "Simon Y. Blackwell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anywhichway/inline-function/issues"
+  },
+  "homepage": "https://github.com/anywhichway/inline-function#readme"
+}
