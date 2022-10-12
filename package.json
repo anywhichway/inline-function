@@ -1,6 +1,6 @@
 {
   "name": "@anywhichway/inline-function",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A web component for safely evaluating complex and symbolic math expressions and other functions and displaying the result.",
   "main": "index.html",
   "scripts": {

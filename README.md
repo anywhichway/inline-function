@@ -69,6 +69,8 @@ a web browser with tightly looping code.
 
 # Version History (reverse chronological order)
 
+2022-10-12 v0.0.8 Minor optimization, moved `connected()` body to `initialize()`.
+
 2022-10-07 v0.0.7 Replaced `slot` with `expression` since `slot` was nto really a custom element slot.
 
 2022-09-25 v0.0.6 Updated for changes to quickComponent.

@@ -1,24 +1,23 @@
 function makeWorker(script) {
-    var URL = window.URL || window.webkitURL;
-    var Blob = window.Blob;
-    var Worker = window.Worker;
+    const URL = window.URL || window.webkitURL,
+        Blob = window.Blob,
+        Worker = window.Worker;
 
     if (!URL || !Blob || !Worker || !script) {
         return null;
     }
 
-    var blob = new Blob([script]);
-    var worker = new Worker(URL.createObjectURL(blob));
-    return worker;
+    const blob = new Blob([script]);
+    return new Worker(URL.createObjectURL(blob));
 }
 
 self.reactive({attributes:["showfunction"]});
 
 self.properties({
     render() {
-        // dummy, gets redefined on connect
+        // dummy, gets redefined on initialize
     },
-    connected() {
+    initialize() {
         this.style.width = "fit-content";
         this.style.maxWidth = "fit-content";
         this.style.fontStyle = "italic";
