@@ -69,6 +69,8 @@ a web browser with tightly looping code.
 
 # Version History (reverse chronological order)
 
+2022-10-15 v0.0.9 Added default value of 'undefined' if no expression is associated with the tag.
+
 2022-10-12 v0.0.8 Minor optimization, moved `connected()` body to `initialize()`.
 
 2022-10-07 v0.0.7 Replaced `slot` with `expression` since `slot` was nto really a custom element slot.

@@ -40,12 +40,12 @@ self.properties({
             });`
                 );
                 worker.onmessage = (event) => {
-                    const text = this.querySelector('expression').textContent.trim(),
+                    const text = this.querySelector('expression')?.textContent.trim() || "undefined",
                         result = cleaner(event.data);
                     this.shadowRoot.innerHTML = `<span style="width:fit-content;white-space: nowrap;">${this.getAttribute("showfunction")==="true" ? text + " = " : ""}${result}</span>`
                 }
             }
-            let f = this.querySelector('expression')?.textContent.trim();
+            let f = this.querySelector('expression')?.textContent.trim() || "undefined";
             if(f) {
                 this.setAttribute("title",f);
                 if(f.startsWith("{") && f.endsWith("}") && f.includes("return ")) {
