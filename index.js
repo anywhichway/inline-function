@@ -23,7 +23,7 @@ self.properties({
         this.style.fontStyle = "italic";
         let worker;
         this.render = function() {
-            if(!worker) {
+           // if(!worker) {
                 const {imports,inline} = [...this.querySelectorAll("script")].reduce(({imports,inline},script) => {
                     const src = script.getAttribute("src");
                     if(src) {
@@ -40,12 +40,12 @@ self.properties({
             });`
                 );
                 worker.onmessage = (event) => {
-                    const text = this.querySelector('expression')?.textContent.trim() || "undefined",
+                    const text = this.querySelector('expression')?.textContent.trim(),
                         result = cleaner(event.data);
                     this.shadowRoot.innerHTML = `<span style="width:fit-content;white-space: nowrap;">${this.getAttribute("showfunction")==="true" ? text + " = " : ""}${result}</span>`
                 }
-            }
-            let f = this.querySelector('expression')?.textContent.trim() || "undefined";
+           // }
+            let f = this.querySelector('expression')?.textContent.trim();
             if(f) {
                 this.setAttribute("title",f);
                 if(f.startsWith("{") && f.endsWith("}") && f.includes("return ")) {

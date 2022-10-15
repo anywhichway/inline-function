@@ -69,6 +69,9 @@ a web browser with tightly looping code.
 
 # Version History (reverse chronological order)
 
+2022-10-15 v0.0.10 Removed caching of worker, sometimes old results were getting returned. Rolled back changes from v0.0.9
+which broke some dependent code using this component.
+
 2022-10-15 v0.0.9 Added default value of 'undefined' if no expression is associated with the tag.
 
 2022-10-12 v0.0.8 Minor optimization, moved `connected()` body to `initialize()`.
